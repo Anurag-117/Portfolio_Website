@@ -1,0 +1,13 @@
+baseURL = "https://anurag-117.github.io/"
+languageCode = "en-us"
+title = "Anurag Dhadse"
+theme = "hana"
+[menu]
+    [[menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[menu.main]]
+        name = "Blog"
+        url = "/blog/"
+        weight = 2
