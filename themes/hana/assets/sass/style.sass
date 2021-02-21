@@ -3,28 +3,38 @@
 .navbar
   background-color: black
   height: 3em
-  li
-    list-style: none
-    display: inline
   ul
     padding: 0
     position: relative
     white-space: nowrap
-    overflow-y: hidden
+    margin-top: 0
     margin-bottom: 0
+    overflow-y: hidden
     -ms-overflow-y: hidden
+    -ms-overflow-style: none
+    ::-webkit-scrollbar
+      display: none
+      width: 0  /* Remove scrollbar space */
+      height: 0
+      background: transparent  /* Optional: just make scrollbar invisible */
+  li
+    list-style: none
+    display: inline
+    overflow-y: scroll
+    box-sizing: content-box
   .nav-title
-    padding-left: 1em
+    padding-left: 1.3em
+    margin-right: 1em
     font-family: Poppins, serif
     font-weight: 600
     font-size: 1rem
     color: white
     text-decoration: none
   .nav-links
+    margin-right: 1em
     font-family: Poppins, serif
     font-weight: 400
     font-size: 0.84rem
-    margin-right: 1em
     a
       color: white
       text-decoration: none
@@ -40,20 +50,20 @@ h2
   font-size: 1.5rem
   font-family: Poppins, serif
   font-weight: 600
+  margin-top: 0.6em
 h3
   font-size: 1.2rem
   font-family: Poppins, serif
   font-weight: 600
+  margin-top: 0.6em
 p
   font-size: 1rem
   font-family: Frank Ruhl Libre, serif
 
 
-
 /* Blog Details style */
 .head-container
   position: relative
-  //background: blanchedalmond
   margin: 1.6em auto
   width: 50vw
   .category
@@ -66,6 +76,7 @@ p
     font-size: 1rem
     width: 40vw
     padding-right: 2rem
+
     margin-bottom: 0
     font-weight: 400
     opacity: 96%
@@ -76,6 +87,18 @@ p
     margin-top: 0.4em
     margin-bottom: 0
     opacity: 70%
+  @media screen and (max-width: 769px)
+    // 769 px or lower
+    // ipad
+    width: 80vw
+    .description
+      width: 70vw
+  @media screen and (max-width: 400px)
+    // 400 px or lower
+    // Smartphones
+    width: 95vw
+    .description
+      width: 90vw
 
 .display-fig-container
   position: relative
@@ -84,20 +107,12 @@ p
   .display-image
     overflow: hidden
     display: inline-block
+    justify-content: center
     margin: 0
     padding: 0
     img
-      max-width: 100%
-      vertical-align: top
-
-.mid-size-fig-container
-  position: relative
-  margin: 0.6em 0
-  .mid-size-image
-    overflow: hidden
-    display: inline-block
-    margin: 0
-    img
+      margin: auto
+      display: block
       max-width: 100%
       vertical-align: top
 
@@ -117,27 +132,12 @@ p
       max-width: 100%
       vertical-align: top
 
-.center-fig-container
-  position: relative
-  margin: 0.6rem 0
-  .center-fig
-    height: auto
-    width: 50vw
-    overflow: hidden
-    display: inline-block
-    margin: 0
-    img
-      max-width: 100%
-      vertical-align: top
-
 figcaption
+  padding: 5px 1.5em 0 1.5em
   font-size: 0.7rem
   font-family: Poppins, serif
   font-weight: 400
   opacity: 80%
-  padding-top: 5px
-  padding-right: 1.5em
-  padding-left: 1.5em
   text-align: center
 
 .line
@@ -148,8 +148,10 @@ figcaption
 .content-container
   margin: 0.6em auto 1.2em auto
   width: 50vw
-  .content
-    margin: 1.2rem 0 0 0
+  p ul ol li h3 h2
+    margin-top: 0.6em
+    margin-bottom: 1.2em
+
   blockquote
     margin: 1.2rem 0 0 -15px
     padding: 0 1em
@@ -165,34 +167,71 @@ figcaption
     font-family: Poppins, serif
     font-style: italic
     opacity: 100%
+  .center-fig-container
+    position: relative
+    margin: 0.6rem 0
+    .center-fig
+      overflow: hidden
+      display: inline-block
+      margin: 0
+      height: auto
+      width: 50vw
+      img
+        max-width: 100%
+        vertical-align: top
+  @media screen and (max-width: 769px)
+    // 769 px or lower | ipad
+    width: 80vw
+    .center-fig-container .center-fig
+      width: 95vw
+  @media screen and (max-width: 400px)
+    // 400 px or lower | Smartphones
+    width: 95vw
+    .center-fig-container .center-fig
+      width: 95vw
+    .quote
+      padding: 0 2em
+
+
 
 .bottom-footer
-  //margin-top: 5em
-  padding-bottom: 0.5em
+  padding: 1.5em 0
   background-color: black
   border-top: #707070 solid
   bottom: 0
   left: 0
   width: 100%
   ul
-    padding: 1em
+    margin: 0
+    padding: 0
+    display: inline-block
     position: relative
-    vertical-align: bottom
+    vertical-align: middle // finally fixes the center align problem of icons and name
     li
       list-style: none
       display: inline-block
       vertical-align: bottom
   .fa-linkedin-in, .fa-medium-m, .fa-envelope
-    margin: 0 0.5em
-    padding-bottom: 0.5em
+    margin: 0 0.5em 0 0.5em
     color: white
   .footer-info
-    margin: 0.5em
-    padding-right: 1.5em
+    vertical-align: middle
+    padding: 0 1.5em 0 1.5em
     font-family: Poppins, serif
     font-weight: 400
     color: white
     font-size: 0.7rem
+  @media screen and (max-width: 415px)
+    // 400 px or lower | Smartphones
+    text-align: center
+    ul
+      margin: 0 auto
+      padding: 0
+    li
+      padding: 0.1em
+    .footer-info
+      margin: 0 2em 0 2em
+      padding: 0
 
 .extra-footer
   margin-top: 5em

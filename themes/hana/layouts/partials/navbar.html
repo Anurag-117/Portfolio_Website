@@ -2,7 +2,6 @@
 <nav class="navbar fixed-top">
     <ul>
         <li class="nav-title">Anurag Dhadse</li>
-
         {{ range .Site.Menus.main }}
             <li class="nav-links"><a href="{{ .URL }}">
                 {{ $text := print .Name | safeHTML }}
@@ -11,6 +10,7 @@
         {{ end }}
         <li class="nav-links"><a href="#">Newsletter</a></li>
         <li class="nav-links"><a href="#">Contact</a></li>
+        <li class="nav-links"><a href="#">Now</a></li>
         <li class="nav-links"><a href="#">About</a></li>
     </ul>
 </nav>
