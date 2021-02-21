@@ -2,13 +2,16 @@
 
 .navbar
   background-color: black
-  height: 3em
+  height: 3.75em
+  display: flex
+  justify-content: center
   ul
     padding: 0
     position: relative
     white-space: nowrap
     margin-top: 0
     margin-bottom: 0
+    vertical-align: middle
     overflow-y: hidden
     -ms-overflow-y: hidden
     -ms-overflow-style: none
@@ -22,19 +25,29 @@
     display: inline
     overflow-y: scroll
     box-sizing: content-box
+  li:first-child
+    margin-right: 1.3em
   .nav-title
     padding-left: 1.3em
-    margin-right: 1em
+    margin-right: 0.3em
     font-family: Poppins, serif
     font-weight: 600
     font-size: 1rem
     color: white
     text-decoration: none
-  .nav-links
-    margin-right: 1em
+  .nav-blog-title
     font-family: Poppins, serif
     font-weight: 400
-    font-size: 0.84rem
+    font-size: 1rem
+    color: white
+    margin-right: 1.3em
+  .nav-links
+    margin-right: 1.3em
+    font-family: Poppins, serif
+    font-weight: 400
+    font-size: 1rem
+    opacity: 90%
+
     a
       color: white
       text-decoration: none
@@ -43,48 +56,48 @@ body
   padding-top: 50px
 
 h1
-  font-size: 2rem
+  font-size: 2.5rem
   font-family: Poppins, serif
   font-weight: 600
 h2
-  font-size: 1.5rem
+  font-size: 1.875rem
   font-family: Poppins, serif
   font-weight: 600
   margin-top: 0.6em
 h3
-  font-size: 1.2rem
+  font-size: 1.5rem
   font-family: Poppins, serif
   font-weight: 600
-  margin-top: 0.6em
+  margin-top: 0.75em
 p
-  font-size: 1rem
+  font-size: 1.25rem
   font-family: Frank Ruhl Libre, serif
+  margin-bottom: 1rem
 
 
 /* Blog Details style */
 .head-container
   position: relative
-  margin: 1.6em auto
+  margin: 2em auto
   width: 50vw
   .category
-    font-size: 0.76rem
+    font-size: 0.95rem
     font-family: Poppins, serif
     color: #061048
     font-weight: 400
     margin: 0.4em 0
   .description
-    font-size: 1rem
+    font-size: 1.25rem
     width: 40vw
-    padding-right: 2rem
-
+    padding-right: 2.5rem
     margin-bottom: 0
     font-weight: 400
     opacity: 96%
   .info
-    font-size: 0.76rem
+    font-size: 0.95rem
     font-family: Poppins, serif
     font-weight: 400
-    margin-top: 0.4em
+    margin-top: 0.5em
     margin-bottom: 0
     opacity: 70%
   @media screen and (max-width: 769px)
@@ -98,7 +111,7 @@ p
     // Smartphones
     width: 95vw
     .description
-      width: 90vw
+      width: 95vw
 
 .display-fig-container
   position: relative
@@ -134,7 +147,7 @@ p
 
 figcaption
   padding: 5px 1.5em 0 1.5em
-  font-size: 0.7rem
+  font-size: 0.9rem
   font-family: Poppins, serif
   font-weight: 400
   opacity: 80%
@@ -148,16 +161,17 @@ figcaption
 .content-container
   margin: 0.6em auto 1.2em auto
   width: 50vw
-  p ul ol li h3 h2
+  li
+    font-size: 1.25rem
+  ul ol
     margin-top: 0.6em
-    margin-bottom: 1.2em
-
+    margin-bottom: 1em
   blockquote
-    margin: 1.2rem 0 0 -15px
-    padding: 0 1em
+    font-size: 1.25em
+    margin: 1.2em 0 1.2em -15px
+    padding: 0 0.7em
     border-left: 3px solid #fb963e
-    font-style: italic
-    line-height: 1.5rem
+    line-height: 1.8rem
     opacity: 100%
   li
     font-family: Frank Ruhl Libre, serif
@@ -220,7 +234,7 @@ figcaption
     font-family: Poppins, serif
     font-weight: 400
     color: white
-    font-size: 0.7rem
+    font-size: 0.85rem
   @media screen and (max-width: 415px)
     // 400 px or lower | Smartphones
     text-align: center
@@ -245,21 +259,21 @@ figcaption
       font-family: Poppins, serif
       font-weight: 400
       color: white
-      font-size: 0.7rem
+      font-size: 0.85rem
     .card-title
       font-family: Poppins, serif
       font-weight: 600
       color: white
-      font-size: 1rem
+      font-size: 1.25rem
     .card-summary
       font-family: Frank Ruhl Libre, serif
       color: white
-      font-size: 0.8rem
+      font-size: 1rem
     .card-info
       font-family: Poppins, serif
       font-weight: 400
       color: white
-      font-size: 0.8rem
+      font-size: 1rem
 
 
 

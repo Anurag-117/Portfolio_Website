@@ -1,4 +1,5 @@
 baseURL = "https://adhadse.github.io/"
+relativeURLs = true
 languageCode = "en-us"
 title = "Anurag Dhadse"
 theme = "hana"
