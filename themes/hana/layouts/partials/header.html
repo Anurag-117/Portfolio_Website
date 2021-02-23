@@ -99,7 +99,8 @@
     </div>
 </div>
 
-{{ $scrollnavJS := resources.Get "js/scrollnav.js" | minify | fingerprint}}
+{{ $scrollnavJS := resources.Get "js/scrollnav.js" | fingerprint}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{{ $scrollnavJS.Permalink }}"></script>
 
 
