@@ -1,21 +1,25 @@
 <!-- Navbar here -->
 <nav class="navbar">
+    <div class="inner">
     <div class="site-nav">
-        <a href="#" class="nav-title">Anurag Dhadse</a>
-        <ul class="flipping-text">
-            {{ range .Site.Menus.main }}
-                <li class="nav-links"><a href="{{ .URL }}">
-                    {{ $text := print .Name | safeHTML }}
-                    {{ $text }}
-                </a></li>
-            {{ end }}
-                <li class="nav-links"><a href="#">Newsletter</a></li>
-                <li class="nav-links"><a href="#">Contact</a></li>
-                <li class="nav-links"><a href="#">Now</a></li>
-                <li class="nav-links"><a href="#">About</a></li>
-        </ul>
-        <span class="nav-blog-title">
-            What I learned from the book 'Making Time'
-        </span>
+        <div class="scroll-nav-main-wrapper">
+            <a href="#" class="nav-title">Anurag Dhadse</a>
+            <ul class="flipping-text">
+                {{ range .Site.Menus.main }}
+                    <li class="nav-links"><a href="{{ .URL }}">
+                        {{ $text := print .Name | safeHTML }}
+                        {{ $text }}
+                    </a></li>
+                {{ end }}
+                    <li class="nav-links"><a href="#">Newsletter</a></li>
+                    <li class="nav-links"><a href="#">Contact</a></li>
+                    <li class="nav-links"><a href="#">Now</a></li>
+                    <li class="nav-links"><a href="#">About</a></li>
+            </ul>
+            <span class="nav-blog-title">
+                - What I learned from the book 'Making Time'
+            </span>
+        </div>
+    </div>
     </div>
 </nav>
